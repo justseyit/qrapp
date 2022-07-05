@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-
 class GeneratePage extends StatefulWidget {
   const GeneratePage({Key? key}) : super(key: key);
 

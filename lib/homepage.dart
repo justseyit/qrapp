@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'scan.dart';
 import 'generate.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -32,7 +31,9 @@ class _HomePageState extends State<HomePage> {
               fit: BoxFit.fill,
             ),
             flatButton("QR Kodu Tara", const ScanPage()),
-            const SizedBox(height: 20.0,),
+            const SizedBox(
+              height: 20.0,
+            ),
             flatButton("QR Kodu Oluştur", const GeneratePage()),
           ],
         ),
@@ -43,7 +44,8 @@ class _HomePageState extends State<HomePage> {
   Widget flatButton(String text, Widget widget) {
     return ElevatedButton(
       onPressed: () async {
-        Navigator.of(context).push(MaterialPageRoute(builder: (context) => widget));
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => widget));
       },
       child: Padding(
         padding: const EdgeInsets.all(18.0),
